@@ -32,6 +32,7 @@ CHIP CPU {
         pc[15];          // address of next instruction
 
     PARTS:
+    
     /* Part 1: Instruction Decoding
     *
     * A-instruction: 0vvvvvvvvvvvvvvv

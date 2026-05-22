@@ -1,0 +1,62 @@
+Hack
+====
+
+What is this?
+-------------
+
+This repository contains your Hack toolchain implementation:
+
+* A Hack Assembler in C
+* A Hack Virtual Machine Translator in C
+* A Hack Compiler in Python
+
+The project currently builds two tools:
+
+* Assembler/Assembler
+* VirtualMachine/VMTranslator
+
+
+Building
+--------
+
+To build everything:
+
+	make all
+
+To remove generated binaries:
+
+	make clean
+
+
+Tool Usage
+----------
+
+Assembler:
+
+	./Assembler/Assembler path/to/file.asm
+
+VM Translator:
+
+	./VirtualMachine/VMTranslator path/to/file.vm
+
+Compiler:
+
+    python3 Compiler/JackCompiler.py path/to/file.jack
+
+
+Project Layout
+--------------
+
+Assembler/
+	Assembler.c      - Entry point for the assembler
+	Parser.c/.h      - Parses Hack assembly commands
+	Code.c/.h        - Converts mnemonics to binary fields
+	SymbolTable.c/.h - Symbol table management
+
+VirtualMachine/
+	VMTranslator.c   - Entry point for the VM translator
+	Parser.c/.h      - Parses VM commands
+	CodeWriter.c/.h  - Emits Hack assembly output
+
+Compiler/
+	Python compiler implementation
